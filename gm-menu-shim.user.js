@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         GM 菜单垫片（共享菜单宿主）
 // @namespace    gm-menu-shim
-// @version      1.1.1
+// @version      1.1.2
 // @description  为不支持 GM_registerMenuCommand 的手机油猴管理器提供页面内共享菜单：各脚本用 GM_registerMenuCommand 注册菜单项后，页面右下角出现"菜单"按钮，点开展开列表。无菜单项时按钮不显示。一级按脚本分组：单项脚本点一下直接执行，多项脚本点进去看二级。
 // @match        *://*/*
 // @grant        none
@@ -70,11 +70,11 @@
     }
     var css = document.createElement('style');
     css.textContent = [
-      '#gmm-fab{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom));z-index:1000000;',
+      '#gmm-fab{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom));z-index:2147483647;',
       ' min-width:56px;height:56px;border-radius:28px;border:none;background:#1a73e8;color:#fff;',
       ' font-size:13px;font-weight:700;box-shadow:0 4px 14px rgba(26,115,232,.4);cursor:pointer;padding:0 14px;',
       ' font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;}',
-      '#gmm-panel{position:fixed;right:14px;bottom:calc(82px + env(safe-area-inset-bottom));z-index:1000000;',
+      '#gmm-panel{position:fixed;right:14px;bottom:calc(82px + env(safe-area-inset-bottom));z-index:2147483647;',
       ' background:#fff;border-radius:12px;box-shadow:0 6px 24px rgba(0,0,0,.22);',
       ' min-width:200px;max-width:78vw;max-height:60vh;overflow-y:auto;display:none;',
       ' font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;}',
